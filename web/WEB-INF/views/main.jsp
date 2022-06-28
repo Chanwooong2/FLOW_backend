@@ -15,6 +15,16 @@
     <hr>
     <table class="extension-tbl">
         <tbody>
+        <tr>
+            <th>Function 선택</th>
+            <td>
+                <select class="box" id="funcSelBox">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+        </tr>
         <tr class="fixed-ex-row">
             <th>고정 확장자</th>
             <td>
