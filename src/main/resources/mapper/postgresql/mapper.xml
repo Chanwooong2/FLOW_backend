@@ -2,5 +2,64 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.postgresql.mapper">
 
-    
+    <select id="getFunctionList" resultType="com.blockFileExtension.vo.FunctionInfo">
+        select
+            func_key	as funcKey,
+            "name",
+            description
+        from functions_tbl;
+    </select>
+
+    <select id="funcValidCheck" resultType="Integer">
+        select
+            count(1)
+        from functions_tbl
+        where func_key = #{funcKey}
+    </select>
+
+    <select id="getExtensionList" resultType="com.blockFileExtension.vo.ExtensionInfo">
+        select
+        <if test="funcKey != null">
+            mfe.func_key	as funcKey,
+        </if>
+            et.ex_key 		as exKey,
+            et.code 		as code,
+            et.default_yn 	as defaultYn
+        from extensions_tbl et
+        <if test="funcKey != null">
+            inner join m_func_extension mfe on et.ex_key = mfe.ex_key
+        </if>
+        where 1 = 1
+        <if test="funcKey != null">
+            and mfe.func_key = #{funcKey}
+        </if>
+        <if test="code != null">
+            and et.code = #{code}
+        </if>
+        <if test="defaultYn != null and defaultYn == true">
+            and et.default_yn = #{defaultYn}
+        </if>
+
+    </select>
+
+    <insert id="addExtension" parameterType="com.blockFileExtension.vo.ExtensionInfo" useGeneratedKeys="true" keyProperty="exKey">
+        insert into extensions_tbl
+            (code, default_yn)
+        values (#{code}, false)
+            on conflict (code) do nothing;
+    </insert>
+
+    <insert id="addExtensionMappingTbl" parameterType="com.blockFileExtension.vo.ExtensionInfo">
+        insert into m_func_extension
+            (func_key, ex_key)
+        values
+            (#{funcKey}, #{exKey})
+    </insert>
+
+    <delete id="deleteExtension" parameterType="Integer">
+        delete from m_func_extension
+        where func_key = 1
+            and ex_key = #{exKey}
+    </delete>
+
 </mapper>

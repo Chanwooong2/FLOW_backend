@@ -10,16 +10,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="Initial Commit">
+    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="function 구분 관련 select box 추가">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ExtensionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/service/ExtensionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/vo/ExtensionInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/vo/FunctionInfo.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/serviceCheck.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/resources/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/postgresql/mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/postgresql/mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,7 +52,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2B4a3MyaYMLYmbD1HWdFLI22D2H" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,6 +70,11 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2954023",
     "spring.configuration.checksum": "7e20bdb43d8a1b69271800ffc08f01d2"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -69,7 +93,7 @@
       <deployment>
         <artifact name="FLOW_backend:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/FLOW_backend_war" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
         <artifact name="FLOW_backend:war exploded">
@@ -168,7 +192,9 @@
       <updated>1656167612805</updated>
       <workItem from="1656167614141" duration="2304000" />
       <workItem from="1656251800935" duration="1588000" />
-      <workItem from="1656337912023" duration="196000" />
+      <workItem from="1656337912023" duration="2176000" />
+      <workItem from="1656431543856" duration="4327000" />
+      <workItem from="1656507638134" duration="13916000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1656169153062</created>
@@ -177,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656169153062</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Front-end 구성 완료">
+      <created>1656338274126</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1656338274126</updated>
+    </task>
+    <task id="LOCAL-00003" summary="function 구분 관련 select box 추가">
+      <created>1656434933630</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656434933630</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +236,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Front-end 구성 완료" />
+    <MESSAGE value="function 구분 관련 select box 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="function 구분 관련 select box 추가" />
   </component>
 </project>

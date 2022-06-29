@@ -6,7 +6,7 @@
         <!-- JDBC-PostgreSQL -->
         <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
             <property name="driverClass" value="org.postgresql.Driver" />
-            <property name="url" value="jdbc:postgresql://localhost:5432/chanwoongDB" />
+            <property name="url" value="jdbc:postgresql://localhost:5432/flowDB" />
             <property name="username" value="chanwoong" />
             <property name="password" value="admin" />
         </bean>
