@@ -10,22 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/exception/ExtensionAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/exception/NotExistFuncKeyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/exception/RowDeleteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/resources/img/loading-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FLOW_backend_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FLOW_backend_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ExtensionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ExtensionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/service/ExtensionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/service/ExtensionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/postgresql/mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/postgresql/mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/common.css" afterDir="false" />
-    </list>
+    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="서비스 연동 및 수정사항 반영" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +185,7 @@
       <workItem from="1656431543856" duration="4327000" />
       <workItem from="1656507638134" duration="14168000" />
       <workItem from="1656599997674" duration="10660000" />
-      <workItem from="1656636866975" duration="9276000" />
+      <workItem from="1656636866975" duration="9992000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1656169153062</created>
@@ -230,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656523196672</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="서비스 연동 및 수정사항 반영">
+      <created>1656683221531</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656683221531</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +244,7 @@
     <MESSAGE value="Front-end 구성 완료" />
     <MESSAGE value="function 구분 관련 select box 추가" />
     <MESSAGE value="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발" />
-    <option name="LAST_COMMIT_MESSAGE" value="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발" />
+    <MESSAGE value="서비스 연동 및 수정사항 반영" />
+    <option name="LAST_COMMIT_MESSAGE" value="서비스 연동 및 수정사항 반영" />
   </component>
 </project>

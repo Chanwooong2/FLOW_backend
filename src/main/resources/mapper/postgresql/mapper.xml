@@ -38,16 +38,16 @@
             inner join m_func_extension mfe on et.ex_key = mfe.ex_key
         </if>
         where 1 = 1
-        <if test="funcKey != null">
-            and mfe.func_key = #{funcKey}
-        </if>
         <if test="code != null">
             and et.code = #{code}
         </if>
         <if test="defaultYn != null and defaultYn == true">
             and et.default_yn = #{defaultYn}
         </if>
+        <if test="funcKey != null">
+            and mfe.func_key = #{funcKey}
         order by mfe.cre_date
+        </if>
 
     </select>
 
