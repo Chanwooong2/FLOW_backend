@@ -1,6 +1,9 @@
 package com.blockFileExtension.service;
 
 import com.blockFileExtension.dao.ExtensionDAO;
+import com.blockFileExtension.exception.ExtensionAlreadyExistException;
+import com.blockFileExtension.exception.NotExistFuncKeyException;
+import com.blockFileExtension.exception.RowDeleteException;
 import com.blockFileExtension.vo.ExtensionInfo;
 import com.blockFileExtension.vo.FunctionInfo;
 import org.springframework.stereotype.Service;
@@ -15,8 +18,11 @@ public class ExtensionService {
         this.extensionDAO = extensionDAO;
     }
 
-    public Boolean funcValidCheck(Integer funcKey){
+    public Boolean checkFuncValidation(Integer funcKey){
         return extensionDAO.checkFuncValidation(funcKey);
+    }
+    public Boolean checkExistExtension(Integer funcKey, String code){
+        return extensionDAO.checkExistExtension(funcKey, code);
     }
     public List<FunctionInfo> getFunctionList(){
         return extensionDAO.getFunctionList();
@@ -43,14 +49,13 @@ public class ExtensionService {
         return extensionDAO.getExtensionList(extensionInfo);
     }
 
-    public void saveExtension(Integer funcKey, String code){
+    public void saveExtension(Integer funcKey, String code) throws NotExistFuncKeyException, ExtensionAlreadyExistException {
 //        funcKey 유효성 검사
-        if(this.funcValidCheck(funcKey) == false){
-            try {
-                throw new Exception();
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
+        if(this.checkFuncValidation(funcKey) == false){
+            throw new NotExistFuncKeyException("존재하지 않는 기능키입니다. funcKey를 확인해주세요.");
+        }
+        if(this.checkExistExtension(funcKey, code) == true){
+            throw new ExtensionAlreadyExistException("이미 추가된 확장자입니다.");
         }
 
         ExtensionInfo extensionInfo = new ExtensionInfo();
@@ -66,11 +71,14 @@ public class ExtensionService {
         extensionDAO.addExtensionMappingTbl(extensionInfo);
     }
 
-    public void deleteExtension(String code){
+    public void deleteExtension(Integer funcKey, String code) throws RowDeleteException {
         Integer exKey = this.getExtensionByCode(code).getExKey();
-        this.deleteExtension(exKey);
+        this.deleteExtension(funcKey, exKey);
     }
-    public void deleteExtension(Integer exKey){
-        extensionDAO.deleteExtension(exKey);
+    public void deleteExtension(Integer funcKey, Integer exKey) throws RowDeleteException{
+        boolean result = extensionDAO.deleteExtension(funcKey, exKey);
+        if(result == false){
+            throw new RowDeleteException("확장자 삭제에 실패했습니다.");
+        }
     }
 }

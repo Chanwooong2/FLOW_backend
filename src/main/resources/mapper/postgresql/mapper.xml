@@ -10,11 +10,19 @@
         from functions_tbl;
     </select>
 
-    <select id="funcValidCheck" resultType="Integer">
+    <select id="checkFuncValid" resultType="Integer">
         select
             count(1)
         from functions_tbl
         where func_key = #{funcKey}
+    </select>
+
+    <select id="checkExistExtension" resultType="Integer">
+        select
+            count(1)
+        from m_func_extension mfe
+                 inner join extensions_tbl et on et.ex_key = mfe.ex_key
+        where mfe.func_key = #{funcKey} and et.code = #{code}
     </select>
 
     <select id="getExtensionList" resultType="com.blockFileExtension.vo.ExtensionInfo">
@@ -39,6 +47,7 @@
         <if test="defaultYn != null and defaultYn == true">
             and et.default_yn = #{defaultYn}
         </if>
+        order by mfe.cre_date
 
     </select>
 
@@ -58,7 +67,7 @@
 
     <delete id="deleteExtension" parameterType="Integer">
         delete from m_func_extension
-        where func_key = 1
+        where func_key = #{funcKey}
             and ex_key = #{exKey}
     </delete>
 

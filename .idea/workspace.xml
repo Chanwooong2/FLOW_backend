@@ -10,20 +10,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="function 구분 관련 select box 추가">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ExtensionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/service/ExtensionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/vo/ExtensionInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/vo/FunctionInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/serviceCheck.jsp" afterDir="false" />
+    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/exception/ExtensionAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/exception/NotExistFuncKeyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/exception/RowDeleteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/img/loading-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FLOW_backend_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FLOW_backend_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ExtensionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ExtensionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/dao/ExtensionDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/service/ExtensionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/service/ExtensionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/postgresql/mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/postgresql/mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +64,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/woong/ws_woong/FLOW_backend/web/resources/css",
+    "last_opened_file_path": "C:/woong/ws_woong/FLOW_backend/web/resources/img",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2954023",
@@ -79,26 +79,30 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\woong\ws_woong\FLOW_backend\web\resources\img" />
       <recent name="C:\woong\ws_woong\FLOW_backend\web\resources\css" />
       <recent name="C:\woong\ws_woong\FLOW_backend\web\WEB-INF" />
       <recent name="C:\woong\ws_woong\FLOW_backend\src\main\resources\mapper\postgresql" />
       <recent name="C:\woong\ws_woong\FLOW_backend\src\main\java" />
-      <recent name="C:\woong\ws_woong\FLOW_backend\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\woong\ws_woong\FLOW_backend\web\resources\img" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.0.36" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.36" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/main" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="FLOW_backend:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
         <artifact name="FLOW_backend:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/flow" />
+          </settings>
+        </artifact>
+        <artifact name="FLOW_backend:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/flow" />
           </settings>
         </artifact>
       </deployment>
@@ -194,7 +198,9 @@
       <workItem from="1656251800935" duration="1588000" />
       <workItem from="1656337912023" duration="2176000" />
       <workItem from="1656431543856" duration="4327000" />
-      <workItem from="1656507638134" duration="13916000" />
+      <workItem from="1656507638134" duration="14168000" />
+      <workItem from="1656599997674" duration="10660000" />
+      <workItem from="1656636866975" duration="9276000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1656169153062</created>
@@ -217,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656434933630</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발">
+      <created>1656523196672</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656523196672</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +251,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Front-end 구성 완료" />
     <MESSAGE value="function 구분 관련 select box 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="function 구분 관련 select box 추가" />
+    <MESSAGE value="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발" />
+    <option name="LAST_COMMIT_MESSAGE" value="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발" />
   </component>
 </project>

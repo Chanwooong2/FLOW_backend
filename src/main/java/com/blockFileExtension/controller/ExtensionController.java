@@ -1,5 +1,8 @@
 package com.blockFileExtension.controller;
 
+import com.blockFileExtension.exception.ExtensionAlreadyExistException;
+import com.blockFileExtension.exception.NotExistFuncKeyException;
+import com.blockFileExtension.exception.RowDeleteException;
 import com.blockFileExtension.service.ExtensionService;
 import com.blockFileExtension.vo.ExtensionInfo;
 import net.sf.json.JSONObject;
@@ -55,9 +58,11 @@ public class ExtensionController {
             try{
                 extensionService.saveExtension(funcKey, code);
                 result = true;
-                msg = "커스텀 확장자 저장 성공";
-            }catch (Exception e){
-                msg = "커스텀 확장자 저장 실패";
+                msg = "확장자 저장 성공";
+            }catch (NotExistFuncKeyException e){
+                msg = e.getMessage();
+            }catch (ExtensionAlreadyExistException e){
+                msg = e.getMessage();
             }
         }
 
@@ -67,18 +72,21 @@ public class ExtensionController {
         return retData;
     }
 
-    @DeleteMapping(value = "/extensions/{code}")
-    public Map<String, Object> deleteExtension(@PathVariable String code){
+    @DeleteMapping(value = "/extensions/{funcKeyAndCode}")
+    public Map<String, Object> deleteExtension(@PathVariable String funcKeyAndCode){
         Map<String, Object> retData = new HashMap<>();
         boolean result = false;
         String msg = "";
 
+        Integer funcKey = Integer.parseInt(funcKeyAndCode.split(",")[0]);
+        String code = funcKeyAndCode.split(",")[1];
+
         try{
-            extensionService.deleteExtension(code);
+            extensionService.deleteExtension(funcKey, code);
             result = true;
-            msg = "커스텀 확장자 삭제 성공";
-        }catch (Exception e){
-            msg = "커스텀 확장자 삭제 실패";
+            msg = "확장자 삭제 성공했습니다.";
+        }catch (RowDeleteException e){
+            msg = e.getMessage();
         }
 
         retData.put("result", result);

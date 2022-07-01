@@ -31,7 +31,23 @@ public class ExtensionDAOImpl implements ExtensionDAO{
 
         Map<String, Object> param = new HashMap<>();
         param.put("funcKey", funcKey);
-        Integer selectResult = session.selectOne(mapper+"funcValidCheck", param);
+        Integer selectResult = session.selectOne(mapper+"checkFuncValid", param);
+
+        if(selectResult > 0){
+            result = true;
+        }
+
+        return result;
+    }
+
+    @Override
+    public Boolean checkExistExtension(Integer funcKey, String code) {
+        boolean result = false;
+
+        Map<String, Object> param = new HashMap<>();
+        param.put("funcKey", funcKey);
+        param.put("code", code);
+        Integer selectResult = session.selectOne(mapper+"checkExistExtension", param);
 
         if(selectResult > 0){
             result = true;
@@ -57,10 +73,18 @@ public class ExtensionDAOImpl implements ExtensionDAO{
     }
 
     @Override
-    public void deleteExtension(Integer exKey) {
+    public Boolean deleteExtension(Integer funcKey, Integer exKey) {
+        boolean result = false;
+
         Map<String, Object> param = new HashMap<>();
+        param.put("funcKey", funcKey);
         param.put("exKey", exKey);
 
-        session.delete(mapper+"deleteExtension", param);
+        Integer deleteResult = session.delete(mapper+"deleteExtension", param);
+
+        if(deleteResult > 0){
+            result = true;
+        }
+        return result;
     }
 }

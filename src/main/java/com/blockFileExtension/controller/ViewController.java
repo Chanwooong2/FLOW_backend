@@ -18,7 +18,7 @@ public class ViewController {
         this.extensionService = extensionService;
     }
 
-    @RequestMapping(value = "/main")
+    @RequestMapping(value = "/")
     public String main(Model model){
         List<FunctionInfo> functionList = extensionService.getFunctionList();
         List<ExtensionInfo> defaultExtensionList = extensionService.getDefaultExtensionList();

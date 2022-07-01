@@ -9,9 +9,10 @@ public interface ExtensionDAO {
 
     List<FunctionInfo> getFunctionList();
     Boolean checkFuncValidation(Integer funcKey);
+    Boolean checkExistExtension(Integer funcKey, String code);
     List<ExtensionInfo> getExtensionList(ExtensionInfo extensionInfo);
     Integer addExtension(ExtensionInfo extensionInfo);
     void addExtensionMappingTbl(ExtensionInfo extensionInfo);
-    void deleteExtension(Integer exKey);
+    Boolean deleteExtension(Integer funcKey, Integer exKey);
 
 }
