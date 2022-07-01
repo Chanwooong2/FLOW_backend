@@ -3,14 +3,18 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="FLOW_backend:war" />
-      <artifact name="FLOW_backend:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="서비스 연동 및 수정사항 반영" />
+    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="쿼리 조건수정">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readmeResources/flow-erd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readmeResources/flow-mainPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +55,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/woong/ws_woong/FLOW_backend/web/resources/img",
-    "project.structure.last.edited": "Artifacts",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2954023",
     "spring.configuration.checksum": "7e20bdb43d8a1b69271800ffc08f01d2"
@@ -71,6 +76,7 @@
       <recent name="C:\woong\ws_woong\FLOW_backend\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\woong\ws_woong\FLOW_backend\readmeResources" />
       <recent name="C:\woong\ws_woong\FLOW_backend\web\resources\img" />
     </key>
   </component>
@@ -185,7 +191,7 @@
       <workItem from="1656431543856" duration="4327000" />
       <workItem from="1656507638134" duration="14168000" />
       <workItem from="1656599997674" duration="10660000" />
-      <workItem from="1656636866975" duration="9992000" />
+      <workItem from="1656636866975" duration="16482000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1656169153062</created>
@@ -222,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656683221531</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="쿼리 조건수정">
+      <created>1656686064969</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1656686064969</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +258,7 @@
     <MESSAGE value="function 구분 관련 select box 추가" />
     <MESSAGE value="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발" />
     <MESSAGE value="서비스 연동 및 수정사항 반영" />
-    <option name="LAST_COMMIT_MESSAGE" value="서비스 연동 및 수정사항 반영" />
+    <MESSAGE value="쿼리 조건수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="쿼리 조건수정" />
   </component>
 </project>
