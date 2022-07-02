@@ -1,7 +1,9 @@
 # ⛔ 파일 확장자 차단
 작성자 : _지원자 문찬웅_ 
 
-![](readmeResources/flow-mainPage.png)
+[![파일 확장자 차단 데모페이지](readmeResources/flow-mainPage.png)](http://175.192.33.235/flow/) <br>
+[⛔ 파일 확장자 차단 데모페이지 링크](http://175.192.33.235/flow/)
+
 ---
 ### 과제 수행 내용
 > 필수 고려사항 **(완료)**
@@ -29,6 +31,7 @@
     - 고정 확장자에 포함되어 있는지 확인
     - 이미 추가되어있는 확장자인지 확인
 - 커스텀 확장자를 추가한 순서대로 시각화
+- 전체 확장자 삭제 기능 추가
 ---
 ### 개발 환경 및 언어
 - JAVA 8
@@ -87,7 +90,8 @@
      ```
 
 - **[DELETE]** /extensions/{funcKeyAndCode}
-  - 확장자 삭제 'funcKey,code' 형식으로 전송 (ex. /extensions/1,exe)
+  - 단일 확장자 삭제 'funcKey,code' 형식으로 전송 (ex. /extensions/1,exe)
+  - 전체 확장자 삭제 'funcKey' 전송 (ex. /extensions/1)
 ---
 ### etc.
 ```
