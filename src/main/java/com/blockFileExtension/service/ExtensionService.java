@@ -75,6 +75,12 @@ public class ExtensionService {
         Integer exKey = this.getExtensionByCode(code).getExKey();
         this.deleteExtension(funcKey, exKey);
     }
+    public void deleteAllExtension(Integer funcKey) throws RowDeleteException{
+        boolean result = extensionDAO.deleteExtension(funcKey, null);
+        if(result == false){
+            throw new RowDeleteException("확장자 삭제에 실패했습니다.");
+        }
+    }
     public void deleteExtension(Integer funcKey, Integer exKey) throws RowDeleteException{
         boolean result = extensionDAO.deleteExtension(funcKey, exKey);
         if(result == false){

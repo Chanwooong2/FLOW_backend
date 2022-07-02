@@ -68,7 +68,9 @@
     <delete id="deleteExtension" parameterType="Integer">
         delete from m_func_extension
         where func_key = #{funcKey}
+        <if test="exKey != null">
             and ex_key = #{exKey}
+        </if>
     </delete>
 
 </mapper>

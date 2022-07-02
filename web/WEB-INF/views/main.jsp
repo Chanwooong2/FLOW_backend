@@ -43,7 +43,11 @@
         <tr class="custom-ex-row">
             <th>커스텀 확장자</th>
             <td>
-                <div><input class="box" type="text" id="customExTxt" placeholder="확장자 입력" onkeyup="checkCharacter(this);"><input class="box" type="button" value="+추가" onclick="addCustomExtension()"></div>
+                <div style="position: relative;">
+                    <input class="box" type="text" id="customExTxt" placeholder="확장자 입력">
+                    <input class="box" type="button" value="+추가" onclick="addCustomExtension()">
+                    <input class="box delete-btn" type="button" value="전체 확장자 삭제" onclick="deleteAllExtension()">
+                </div>
                 <div class="box">
                     <div id="totalCnt">0 / 200</div>
                     <div id="customExList">
@@ -250,6 +254,38 @@
         });
     }
 
+    function deleteAllExtension(){
+        $('.loading-page').show();
+
+        let url = "/flow/extensions/" + g_funcKey;
+
+        $.ajax({
+            url:url,
+            type : 'DELETE',
+            dataType:'json',
+            contentType: 'application/json',
+            success : function(data){
+                if(data.result) {
+                    // Init default extension
+                    $('.fixed-ex-row td').empty();
+                    displayDefaultCheckBox();
+                    setCheckBoxEventListener();
+
+                    // Init custom extension
+                    $('#customExList').empty();
+                    displayCount();
+                }else{
+                    alert(data.msg);
+                }
+            },
+            error : function(data){
+                alert("Communication error with server.");
+            },
+            complete : function(){
+                $('.loading-page').hide();
+            }
+        });
+    }
     function deleteDefaultExtension(code){
         $('.loading-page').show();
 

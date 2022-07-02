@@ -78,11 +78,21 @@ public class ExtensionController {
         boolean result = false;
         String msg = "";
 
-        Integer funcKey = Integer.parseInt(funcKeyAndCode.split(",")[0]);
-        String code = funcKeyAndCode.split(",")[1];
+        Integer funcKey;
+        String code = null;
+        String strArr[] = funcKeyAndCode.split(",");
+        funcKey = Integer.parseInt(strArr[0]);
+        if(strArr.length > 1){
+            code = strArr[1];
+        }
 
         try{
-            extensionService.deleteExtension(funcKey, code);
+            if(strArr.length > 1){
+                extensionService.deleteExtension(funcKey, code);
+            }else{
+                extensionService.deleteAllExtension(funcKey);
+            }
+
             result = true;
             msg = "확장자 삭제 성공했습니다.";
         }catch (RowDeleteException e){

@@ -3,17 +3,22 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="FLOW_backend:war" />
+      <artifact name="FLOW_backend:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="쿼리 조건수정">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readmeResources/flow-erd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readmeResources/flow-mainPage.png" afterDir="false" />
+    <list default="true" id="0f674863-9a0f-4cd9-b088-3fa94e9fe0ef" name="Changes" comment="README.md 작성&#10; - 과제 수행 내용&#10; - 구현 시 고려사항&#10; - 개발 환경 및 언어&#10; - DB&#10; - API 명세&#10; - etc.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readmeResources/flow-mainPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/readmeResources/flow-mainPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ExtensionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/controller/ExtensionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/service/ExtensionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blockFileExtension/service/ExtensionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/postgresql/mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/postgresql/mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,24 +54,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/woong/ws_woong/FLOW_backend/web/resources/img",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2954023",
-    "spring.configuration.checksum": "7e20bdb43d8a1b69271800ffc08f01d2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/woong/ws_woong/FLOW_backend/web/resources/img&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;7e20bdb43d8a1b69271800ffc08f01d2&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\woong\ws_woong\FLOW_backend\web\resources\img" />
@@ -191,7 +196,8 @@
       <workItem from="1656431543856" duration="4327000" />
       <workItem from="1656507638134" duration="14168000" />
       <workItem from="1656599997674" duration="10660000" />
-      <workItem from="1656636866975" duration="16482000" />
+      <workItem from="1656636866975" duration="17934000" />
+      <workItem from="1656732283279" duration="2455000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1656169153062</created>
@@ -235,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656686064969</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="README.md 작성&#10; - 과제 수행 내용&#10; - 구현 시 고려사항&#10; - 개발 환경 및 언어&#10; - DB&#10; - API 명세&#10; - etc.">
+      <created>1656692464110</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656692464110</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +272,7 @@
     <MESSAGE value="서비스 개발 완료&#10;1. 모델 생성&#10;2. DB 연동&#10;3. Query 작성&#10;4. 서비스 개발" />
     <MESSAGE value="서비스 연동 및 수정사항 반영" />
     <MESSAGE value="쿼리 조건수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="쿼리 조건수정" />
+    <MESSAGE value="README.md 작성&#10; - 과제 수행 내용&#10; - 구현 시 고려사항&#10; - 개발 환경 및 언어&#10; - DB&#10; - API 명세&#10; - etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md 작성&#10; - 과제 수행 내용&#10; - 구현 시 고려사항&#10; - 개발 환경 및 언어&#10; - DB&#10; - API 명세&#10; - etc." />
   </component>
 </project>

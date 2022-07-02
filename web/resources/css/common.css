@@ -60,6 +60,11 @@ input[type=button]{
     color: white;
     cursor: pointer;
 }
+input[type=button].delete-btn{
+    width: 130px;
+    position: absolute;
+    right: 0;
+}
 input[type=button]:hover {
     opacity: 0.8;
 }
